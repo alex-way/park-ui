@@ -1,1 +1,1 @@
-export { default as ButtonExample } from './ButtonExample.svelte'
+export * from './button/button.stories'
