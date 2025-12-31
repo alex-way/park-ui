@@ -1,5 +1,5 @@
 import { withThemeByClassName } from '@storybook/addon-themes'
-import type { Preview } from '@storybook/svelte'
+import type { Preview, SvelteRenderer } from '@storybook/svelte'
 import './index.css'
 
 const preview: Preview = {
@@ -12,13 +12,16 @@ const preview: Preview = {
     layout: 'padded',
   },
   decorators: [
-    withThemeByClassName({
+    withThemeByClassName<SvelteRenderer>({
       defaultTheme: 'light',
       themes: {
         light: '',
         dark: 'dark',
       },
     }),
+    (story) => {
+      return story()
+    },
   ],
 }
 
