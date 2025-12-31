@@ -32,6 +32,7 @@
   <section>
     <h2>Sizes</h2>
     <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+      <Button size="2xs">2X Small</Button>
       <Button size="xs">Extra Small</Button>
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>

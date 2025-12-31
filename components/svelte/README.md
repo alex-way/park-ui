@@ -69,6 +69,7 @@ The Button component supports multiple variants:
 #### Sizes
 
 Available sizes:
+- `2xs`
 - `xs`
 - `sm`
 - `md` (default)
@@ -77,6 +78,7 @@ Available sizes:
 - `2xl`
 
 ```svelte
+<Button size="2xs">2X Small</Button>
 <Button size="xs">Extra Small</Button>
 <Button size="sm">Small</Button>
 <Button size="md">Medium</Button>
@@ -84,6 +86,18 @@ Available sizes:
 <Button size="xl">Extra Large</Button>
 <Button size="2xl">2X Large</Button>
 ```
+
+## Styling with Panda CSS
+
+The Button component is designed to work with Panda CSS for styling. To generate the styled-system:
+
+```bash
+bun run prepare
+```
+
+This will generate the necessary CSS from the button recipe in the Park UI preset.
+
+**Note:** The component includes fallback inline styles for development purposes. These provide basic styling to make the component functional without requiring styled-system generation first. In production, you should use the generated Panda CSS styles for proper design system integration.
 
 ## Development
 

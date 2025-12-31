@@ -30,7 +30,7 @@
      * Button size
      * @default "md"
      */
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
+    size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl'
     /**
      * Children content
      */
@@ -103,7 +103,17 @@
 </button>
 
 <style>
-  /* Base button styles - these will be enhanced by styled-system/panda-css */
+  /* 
+   * IMPORTANT: These are temporary fallback styles for development and testing.
+   * 
+   * In production, these styles should be replaced by Panda CSS generated styles.
+   * Run `bun run prepare` to generate the styled-system from panda.config.ts,
+   * which will provide the proper design system tokens and variants.
+   * 
+   * The current inline styles are basic approximations to make the component
+   * functional without requiring styled-system generation first.
+   */
+  
   .button {
     position: relative;
     display: inline-flex;
@@ -127,6 +137,12 @@
   }
   
   /* Size variants */
+  .button[data-size="2xs"] {
+    height: 1.25rem;
+    padding: 0 0.375rem;
+    font-size: 0.625rem;
+  }
+  
   .button[data-size="xs"] {
     height: 1.5rem;
     padding: 0 0.5rem;
@@ -163,7 +179,7 @@
     font-size: 1.5rem;
   }
   
-  /* Visual variants - basic implementation */
+  /* Visual variants - basic fallback implementation */
   .button[data-variant="solid"] {
     background: #3b82f6;
     color: white;
