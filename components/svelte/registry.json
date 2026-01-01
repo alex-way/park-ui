@@ -1,0 +1,31 @@
+{
+  "$schema": "https://park-ui.com/schema/registry.json",
+  "name": "@park-ui/svelte",
+  "homepage": "https://park-ui.com",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "dependencies": ["@ark-ui/svelte", "svelte"],
+      "files": [
+        {
+          "path": "src/components/ui/Button.svelte",
+          "type": "registry:ui"
+        }
+      ],
+      "registryDependencies": ["button-recipe"]
+    },
+    {
+      "name": "button-recipe",
+      "type": "registry:recipe",
+      "dependencies": ["@pandacss/dev"],
+      "files": [
+        {
+          "path": "../../packages/preset/src/recipes/button.ts",
+          "type": "registry:recipe",
+          "imports": "import { button } from './button'"
+        }
+      ]
+    }
+  ]
+}
